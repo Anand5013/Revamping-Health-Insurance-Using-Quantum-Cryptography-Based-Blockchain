@@ -49,3 +49,7 @@ attack.
   pip install python-docx
   pip install docx2pdf
 ```
+
+#Imortanat Note
+
+The Ganache Addresses and Private Keys used in the project are for experimental purposes, so these will not work with real Ethereum addresses if used.
