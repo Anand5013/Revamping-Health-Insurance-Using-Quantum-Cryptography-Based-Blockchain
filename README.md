@@ -35,7 +35,7 @@ attack.
 
  Download and Install Ganache from this site, https://trufflesuite.com/ganache/
 
- Either quickstart or else setup a workplace in Ganache
+ Either quickstart or else setup a workplace in Ganache, change the hospital admin, lab admin, pharamacist and insurance agent addresses based on the addresses of your Ganache addresses.
  
  Then install the following dependencies in the working directoryusing following commands,
 ```sh
