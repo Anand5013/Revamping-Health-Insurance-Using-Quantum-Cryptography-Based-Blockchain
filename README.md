@@ -40,6 +40,8 @@ attack.
  Then install the following dependencies in the working directoryusing following commands,
 ```sh
   cd my-project
+  python -m venv /path/to/directory
+  path\to\venv\Scripts\Activate.ps1
   pip install numpy
   pip install python-csv
   pip install flask
