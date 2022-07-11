@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>index</title>
+	<style type="text/css">
+      
+ .div1{
+        background: linear-gradient(to bottom, #66ffff 0%, #ffffff 100%);
+      	height: 600px;
+      	width: 600px;
+        border-radius: 8px;
+        box-sizing: border-box;
+        
+        
+
+  }
+  body{
+        background-image: url("{{ url_for ('static', filename = 'block2.jpg') }}");
+        background-size: cover;
+    }
+  .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.topnav {
+  overflow: hidden;
+  background-color: rgb(55, 52, 235);
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 24px 26px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav p {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1px 2px;
+  text-decoration: none;
+  font-size: 35px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+
+
+
+</style>
+</head>
+<body>
+<center>
+  <div class="topnav">
+  
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-h-square" style="font-size:55px;color:red"></i>EALTH INSURANCE</p>
+    
+    <div class="topnav-right">
+      <a href="/blockid">BLOCKS</a>
+      <a href="/about">About</a>
+    </div>
+  </div>
+
+<br><br>
+
+<div class="div1">
+  <form action="/hospitalsi">
+	<br><br>
+	<a href="hospitalsi.html"><button class="button"><i class="fa fa-hospital-o" style="font-size:25px;color:white"></i><span>&nbsp; Hospital Admin</span></button></a>
+  </form>
+	<br><br>
+  <form action="/labsi">
+	<a href="labsi.html"><button class="button"><i class="fa fa-user-md" style="font-size:25px;color:white"> </i><span>&nbsp; Lab Admin</span></button></a>
+  </form>
+  <br><br>
+  <form action="/patientsi">
+  <a href="patientsi.html"><button class="button"><i class="fa fa-wheelchair" style="font-size:27px;color:white"> </i><span>&nbsp;  Patient</span></button></a>
+	</form><br><br>
+  <form action="/iagent">
+    <a href="iagent.html"><button class="button"><i class="fa fa-id-card" style="font-size:23px;color:white"> </i><span>&nbsp;  Insurance Agent</span></button></a>
+  </form><br><br>
+  <form action="/pharmasi">
+    <a href="pharmasi.html"><button class="button"><i class="fa fa-medkit" style="font-size:23px;color:white"></i><span>&nbsp;  Pharmacist</span></button></a>
+  </form>
+ </div>
+
+<br><br><br><br>
+<br>
+<br>
+</center>
+</body>
+</html>

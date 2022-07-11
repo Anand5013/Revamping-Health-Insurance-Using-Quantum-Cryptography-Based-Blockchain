@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  
+}
+#customers td{
+    width: 80%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1e5f47;
+  color: white;
+  width: 120px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border-radius: 4px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  
+}
+
+
+.button2 {padding: 12px 28px;}
+h1{
+  background-color: rgb(201, 129, 201);
+  width:300px;
+  height:50px;
+  font-family:'digital-clock-font';
+  src: url('put_the_location_to_your_font.ttf or .otf');
+}
+
+</style>
+</head>
+<body>
+<center>
+<h1>RECORDS</h1>
+
+<table id="customers">
+  <tr>
+    <th scope="row">Patient ID</th>
+    <td>{{id}}</td>
+  </tr> 
+
+  <tr>
+    <th scope="row">Medicine details</th>
+    <td>{{med}}</td>
+  </tr>
+
+  
+   
+  
+</table>
+<br><br><br>
+<form action="/">
+    <input type="submit" value="HOME" class="button button2"></input>
+</form>
+
+</center>
+</body>
+</html>
+
+

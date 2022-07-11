@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  
+}
+#customers td{
+    width: 80%;
+}
+
+#customers td, #customers th {
+  border: 1px solid whitesmoke;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1e5f47;
+  color: white;
+  width: 120px;
+}
+.button {
+  background-color: #32b147; /* Green */
+  border-radius: 20px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  width: 220px;
+  
+}
+.button1 {
+  background-color: #df7247; /* Green */
+  border-radius: 20px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  width: 220px;
+  
+}
+h1{
+  color: #32b147;
+  
+}
+
+.button2 {padding: 12px 36px;}
+
+</style>
+</head>
+<body>
+<center>
+<h1><b>Insurance Premium Amount Paid</b></h1>
+
+<table id="customers">
+  <tr>
+    <th scope="row">Patient ID</th>
+    <td>{{id}}</td>
+  </tr> 
+
+  <tr>
+    <th scope="row">Patient name</th>
+    <td>{{name}}</td>
+  </tr>
+  <tr>
+    <th scope="row">Plan</th>
+    <td>{{plan}}</td>
+  </tr> 
+  
+  <tr>
+    <th scope="row">Paid Premium amount</th>
+    <td>{{prem}} ETH</td>
+  </tr> 
+  
+  <tr>
+    <th scope="row">Remaining Amount</th>
+    <td>{{rem}}</td>
+  </tr> 
+   
+  
+</table>
+<br><br>
+<input type="submit" value="Download Receipt" class="button1 button2" onclick="myFunction()"></input><br><br><br>
+<form action="/">
+  <input type="submit" value="HOME" class="button1 button2" ></input>
+</form>
+
+</center>
+<script>
+  function myFunction() {
+    alert("Premium Pay Receipt Downloaded");
+  }
+</script> 
+</body>
+</html>
+
+

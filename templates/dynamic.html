@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>dynamic</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript">
+        function addData(el) {
+               var table = document.getElementById('dataTable');
+               var tr = table.insertRow();
+               el.form.querySelectorAll('input').forEach(function(el) {
+               var cell = tr.appendChild(document.createElement('td'));
+               cell.textContent = el.value;
+              });
+            }
+			function downloadToCSV(csv, filename) {
+				var csvFile;
+				var downloadLink;
+			
+				// CSV file
+				csvFile = new Blob([csv], {type: "text/csv"});
+			
+				// Download link
+				downloadLink = document.createElement("a");
+			
+				// File name
+				downloadLink.download = filename;
+			
+				// Create a link to the file
+				downloadLink.href = window.URL.createObjectURL(csvFile);
+			
+				// Hide download link
+				downloadLink.style.display = "none";
+			
+				// Add the link to DOM
+				document.body.appendChild(downloadLink);
+			
+				// Click download link
+				downloadLink.click();
+			}
+			
+			function exportTbToCSVformat(filename) {
+				var csv = [];
+				var rows = document.querySelectorAll("table tr");
+				
+				for (var i = 0; i < rows.length; i++) {
+					var row = [], cols = rows[i].querySelectorAll("td, th");
+					
+					for (var j = 0; j < cols.length; j++) 
+						row.push(cols[j].innerText);
+					
+					csv.push(row.join(","));        
+				}
+			
+				// Download CSV file
+				downloadToCSV(csv.join("\n"), filename);
+			}
+	</script>
+</head>
+<center>
+<body>
+	<form align="center" action="/pharmacist" method="POST">
+		<h3><b>Medicine details</b></h3><br> 
+		user name : <input type="text" id="user" name="user"><br><br>
+		password : <input type="password" id="pass" name="password"><br><br>
+		Id : <input type="number" id="id" name="id"><br><br>
+		S.no : <input type="number" id="sno" name="sno"><br><br> 
+		Medicine Name : <input type="text" id="med" name="med"><br><br> 
+		Quantity : <input type="number" id="quantity" name="quantity"><br><br> 
+		Cost(ETH) : <input type="number" id="cost" name="cost"><br><br>
+		<button type="button" onclick="addData(this)">Add</button>
+		<button type="reset">Reset</button>
+		
+	</form>
+	
+	  
+	  
+	  <div id="tab">
+		<br><br>
+		<table id="dataTable" cellspacing="3" cellpadding="3" border="1">
+		  <thead>
+			<tr>
+			  <td>S.no<td>Medicine Name<td>Quantity<td>Cost(ETH)
+			</tr>
+		  </thead>
+		</table>
+		<br><br>
+		<button onclick="exportTbToCSVformat('meds_det.csv')">Save Details</button>
+		
+</body>
+</center>
+
+</html>

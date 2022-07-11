@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style type="text/css">
+h2{
+  color: green;
+}
+ .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: darkgreen;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-left: 25px;
+}
+
+.button:hover span:after {
+  opacity: 3;
+  left: 0;
+}
+
+</style>
+<body>
+  <center>
+  <img src="{{url_for('static',filename = 'verify1.jpg')}}"/>
+  <h2>This patient has been verified successfully by hospital and lab admin</h2>
+  <form action="/">
+    
+    <button class="button"><i style="font-size:25px;color:white"></i><span>Go to Home</span></button>
+  </form>
+  </center>
+
+</body>
+</html>

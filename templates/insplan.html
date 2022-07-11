@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+body {
+  align-items: center;
+  background: #EEF5FD;
+  color: #545556;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
+input[type=number],input[type=date],input[type=text] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(19, 121, 161);
+  border-radius: 4px;
+  align-items: flex-start;
+  align-items: center;
+  left: 18px;
+}
+
+
+.containerOuter {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 2px 6px 20px 2px rgba(10,10,120,0.15);
+}
+.container {
+  position: relative;
+  margin: 20px;
+  overflow: hidden;
+  width: 500px;
+  height: 750px;
+}
+
+
+
+.circle {
+  border: 2px solid #545556;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  
+  transition: border-color 300ms;
+  width: 20px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border-radius: 4px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  
+}
+
+
+.button2 {padding: 12px 28px;}
+
+
+
+</style>
+<body>
+<br><br>
+<form action ="/see_insurance_avail" method="POST">
+ <div class="containerOuter">
+  
+  <div class="container">
+  <input type="hidden"  name="key" value="d203fd7a157c4a69733a727ae66d431407cc1cca549fb3733a09f239217146ec"><br>
+  <label>  Your ID</label>
+  <br>
+  <input type="number"  name="id"><br>
+  <br>
+  <label>Today's Date</label>
+  <br>
+  <input type="date"  name="date"><br>
+  <br>
+  
+  <input type="radio" class="circle" name="plan" value="A"> PLAN A</input><br><br>
+  <li>
+    Basic fee : 5 ether 
+  </li>
+  <li>
+    Premium : 10 ether
+  </li>
+  <li>
+    Deductible : 20 ether 
+  </li>
+  <li>
+    Coverage : 45 ether 
+  </li>
+  <li>
+    Duration : 1 month
+  </li>
+  <br>
+  <input type="radio" class="circle" name="plan" value="B"> PLAN B</input><br><br>
+  <li>
+    Basic fee : 7 ether 
+  </li>
+  <li>
+    Premium : 20 ether
+  </li>
+  <li>
+    Deductible : 15 ether 
+  </li>
+  <li>
+    Coverage : 55 ether 
+  </li>
+  <li>
+    Duration : 2 months
+  </li>
+  <input type="submit" value="submit" class="button button2" onclick="myFunction()"></input>
+   
+    
+  </div>
+ </div>
+</form>
+<script>
+  function myFunction() {
+    alert("Plan Availed receipt Downloaded");
+  }
+  </script>
+</body>
+</html>

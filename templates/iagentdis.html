@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  
+}
+#customers td{
+    width: 80%;
+}
+
+#customers td, #customers th {
+  border: 1px solid whitesmoke;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1e5f47;
+  color: white;
+  width: 80px;
+}
+#customers1 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  
+}
+#customers1 td{
+    width: 80%;
+}
+
+#customers1 td, #customers1 th {
+  border: 1px solid whitesmoke;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+#customers1 tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers1 tr:hover {background-color: #ddd;}
+
+#customers1 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #a9292b;
+  color: white;
+  width: 80px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border-radius: 4px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  
+}
+
+
+.button2 {padding: 12px 28px;}
+h1{
+  color: #1e5f47;
+}
+
+</style>
+</head>
+<body>
+<center>
+<br><br><br><br><br>
+<h1>REMAINING AMOUNT PAID</h1>
+<table id="customers1">
+
+    
+    <tr>
+        <th scope="row">HospitalAdmin</th>
+        <td><b style="font-size:25px;color:green">&#9745;</b>&nbsp;VERIFIED</td>
+    </tr> 
+    <tr>
+        <th scope="row">Lab Admin</th>
+        <td><b style="font-size:25px;color:green">&#9745;</b>&nbsp;VERIFIED</td>
+    </tr>
+    <tr>
+        <th scope="row">Pharmacy Bills</th>
+        <td>{{pharm}}</td>
+    </tr>
+    <tr>
+        <th scope="row">Insurance Plan</th>
+        <td>{{Insurance}}</td>
+    </tr>
+    <tr>
+        <th scope="row">Premium Amount Paid</th>
+        <td>{{Prempaid}}</td>
+    </tr>
+    
+</table>
+<br><br>
+<table id="customers">
+
+
+    <tr>
+        <th scope="row">From</th>
+        <td>{{fr}}</td>
+      </tr> 
+    
+      <tr>
+        <th scope="row">To</th>
+        <td>{{to}}</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">Value</th>
+        <td>{{val}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Gas</th>
+        <td>{{gas}} ETH</td>
+      </tr>
+      <tr>
+        <th scope="row">gasprice</th>
+        <td>{{gasprice}}</td>
+      </tr> 
+      <tr>
+        <th scope="row">balance</th>
+        <td>{{balance}}</td>
+      </tr> 
+      <tr>
+        <th scope="row">Medicine Price</th>
+        <td>{{med}}</td>
+      </tr> 
+      <tr>
+        <th scope="row">Remaining Amount</th>
+        <td>{{rem}}</td>
+      </tr> 
+
+</table>
+<br><br><br>
+
+<input type="submit" value="Download Receipt" class="button button2" onclick="myFunction()"></input><br><br><br>
+<form action="/">
+    
+    <input type="submit" value="&#128526; HOME" class="button button2"></input>
+</form>
+
+</center>
+<script>
+  function myFunction() {
+    alert("Full Amount Receipt Downloaded");
+  }
+  </script>
+</body>
+</html>
+
+

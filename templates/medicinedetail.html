@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  
+  
+}
+#customers td{
+    width: 80%;
+    border-radius: 10px;
+}
+
+#customers td, #customers th {
+  border: 3px solid whitesmoke;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1e5f47;
+  color: white;
+  width: 120px;
+}
+.button {
+  background-color: #32b147; /* Green */
+  border-radius: 20px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  width: 220px;
+  
+}
+.button1 {
+  background-color: #df7247; /* Green */
+  border-radius: 7px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  width: 220px;
+  
+}
+h1{
+  color: green;
+  width:300px;
+  height:50px;
+  
+}
+
+
+
+.button2 {padding: 12px 36px;}
+.bg{
+    background-color: white;
+}
+
+</style>
+</head>
+<body>
+<center>
+<h1>Medical Records</h1>
+<br><br>
+<div class="bg">
+<table id="customers">
+    <tr>
+      <th scope="row">Patient ID</th>
+      <td>{{id}}</td>
+    </tr> 
+    <tr>
+      <th scope="row">Medicine details</th>
+      <td>{{med}}</td>
+    </tr>
+  </table>
+   
+  
+</table>
+</div>
+<br><br>
+
+<form action="/">
+  <input type="submit" value="Save Record" class="button1 button2"></input>
+</form>
+
+</center>
+</body>
+</html>
+
+
